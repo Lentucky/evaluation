@@ -19,10 +19,9 @@
             <div class="wrapper">
                 <ul>
                     <li><a href="index.php">Home</a></li>
-                    <li><a href="manage-admin.php">Questionnaire</a></li>
-                    <li><a href="manage-category.php">Participants</a></li>
-                    <li><a href="manage-food.php">Evaluators</a></li>
-                    <li><a href="manage-order.php">Order</a></li>
+                    <li><a href="questionnaire.php">Questionnaire</a></li>
+                    <li><a href="participant.php">Participants</a></li>
+                    <li><a href="evaluator.php">Evaluators</a></li>
                     <li><a href="logout.php">Logout</a></li>
                 </ul>
             </div>

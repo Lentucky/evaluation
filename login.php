@@ -59,16 +59,21 @@
         $username = mysqli_real_escape_string($conn, $_POST['username']);
         $password = mysqli_real_escape_string($conn, $_POST['password']);
 
-        $sql = "SELECT * FROM tbl_participants WHERE username='$username' AND password='$password'";
+        $sql = "SELECT * FROM tbl_users WHERE username='$username' AND password='$password' ";
 
         $res = mysqli_query($conn, $sql);
 
+        $row = mysqli_fetch_assoc($res);
         $count = mysqli_num_rows($res);
+        $evaluator = $row['evaluator'];
+        $user_id = $row['user_id'];
 
         if($count==1)
         {
-            $_SESSION['login'] = "<div class='success'>Login Successful.</div>";
+            $_SESSION['login'] = "<div class='success'>Login Successful $logged_id.</div>";
             $_SESSION['user'] = $username; 
+            $_SESSION['evaluator'] = $evaluator;
+            $_SESSION['logged_id'] = $user_id;
 
             header('location:'.SITEURL.'index.php');
         }

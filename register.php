@@ -56,13 +56,6 @@
                     </tr>
 
                     <tr>
-                        <td>Program: </td>
-                        <td>
-                            <input type="text" name="program" placeholder="Enter Your Program">
-                        </td>
-                    </tr>
-
-                    <tr>
                         <td>Email: </td>
                         <td>
                             <input type="text" name="email" placeholder="Enter Your Email">
@@ -73,6 +66,14 @@
                         <td>Password: </td>
                         <td>
                             <input type="password" name="password" placeholder="Your Password">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Evaluator: </td>
+                        <td>
+                            <input type="radio" name="evaluator" value="Yes"> Yes 
+                            <input type="radio" name="evaluator" value="No"> No
                         </td>
                     </tr>
 
@@ -115,22 +116,30 @@
         //1. Get the Data from form
         $username = $_POST['username'];
         $full_name = $_POST['full_name'];
-        $program = $_POST['program'];
         $email = $_POST['email'];
         $password = $_POST['password'];
+
+        if(isset($_POST['evaluator']))
+        {
+            $evaluator = $_POST['evaluator'];
+        }
+        else
+        {
+            $evaluator = "No"; //SEtting the Default Value
+        }
         //$password = md5($_POST['password']); //Password Encryption with MD5
 
         //2. SQL Query to Save the data into database
-        $sql = "INSERT INTO tbl_participants SET 
+        $sql = "INSERT INTO tbl_users SET 
             username='$username',
             full_name='$full_name',
-            program='$program',
             email='$email',
-            password='$password'
+            password='$password',
+            evaluator='$evaluator'
         ";
  
         //3. Executing Query and Saving Data into Datbase
-        $res = mysqli_query($conn, $sql) or die(mysqli_error($conn));
+        $res = mysqli_query($conn, $sql);
 
         //4. Check whether the (Query is Executed) data is inserted or not and display appropriate message
         if($res==TRUE)

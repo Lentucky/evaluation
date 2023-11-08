@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Nov 03, 2023 at 06:57 AM
+-- Generation Time: Nov 08, 2023 at 11:48 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -18,6 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
+-- Database: `eval_db`
 --
 
 -- --------------------------------------------------------
@@ -95,7 +96,8 @@ CREATE TABLE `tbl_participants` (
 
 INSERT INTO `tbl_participants` (`participant_id`, `username`, `full_name`, `program`, `email`, `password`) VALUES
 (1, 'part', 'participant', 'CSS', 'email@email.com', 'part'),
-(2, 'sieroo', 'sieroo', 'sieroo', 'sieroo', 'sieroo');
+(2, 'sieroo', 'sieroo', 'sieroo', 'sieroo', 'sieroo'),
+(3, 'Len', 'len', 'bscs221a', 'email@email.com', 'len');
 
 -- --------------------------------------------------------
 
@@ -138,16 +140,28 @@ INSERT INTO `tbl_question` (`question_id`, `questionnaire_id`, `question`) VALUE
 
 CREATE TABLE `tbl_questionnaire` (
   `questionnaire_id` int(11) NOT NULL,
-  `title` varchar(100) NOT NULL
+  `user_id` varchar(100) DEFAULT NULL,
+  `evaluator_id` varchar(100) DEFAULT NULL,
+  `Q1` varchar(100) NOT NULL,
+  `Q2` varchar(100) NOT NULL,
+  `Q3` varchar(100) DEFAULT NULL,
+  `Q4` varchar(100) DEFAULT NULL,
+  `Q5` varchar(100) DEFAULT NULL,
+  `Q6` varchar(100) DEFAULT NULL,
+  `Q7` varchar(100) DEFAULT NULL,
+  `Q8` varchar(100) DEFAULT NULL,
+  `Q9` varchar(100) DEFAULT NULL,
+  `Q10` varchar(100) DEFAULT NULL,
+  `comment` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `tbl_questionnaire`
 --
 
-INSERT INTO `tbl_questionnaire` (`questionnaire_id`, `title`) VALUES
-(1, 'first try'),
-(2, 'second attempt');
+INSERT INTO `tbl_questionnaire` (`questionnaire_id`, `user_id`, `evaluator_id`, `Q1`, `Q2`, `Q3`, `Q4`, `Q5`, `Q6`, `Q7`, `Q8`, `Q9`, `Q10`, `comment`) VALUES
+(1, '2', '1', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', 'weh'),
+(2, '2', '1', '5', '1', '3', '4', '4', '4', '5', '3', '4', '4', 'pkayu');
 
 -- --------------------------------------------------------
 
@@ -162,6 +176,29 @@ CREATE TABLE `tbl_response` (
   `evaluator_id` int(11) NOT NULL,
   `date_taken` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_users`
+--
+
+CREATE TABLE `tbl_users` (
+  `user_id` int(11) NOT NULL,
+  `username` varchar(100) NOT NULL,
+  `full_name` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `password` varchar(100) NOT NULL,
+  `evaluator` varchar(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `tbl_users`
+--
+
+INSERT INTO `tbl_users` (`user_id`, `username`, `full_name`, `email`, `password`, `evaluator`) VALUES
+(1, 'admin', 'len', 'daniellarson@email.com', 'admin', 'Yes'),
+(2, 'len', 'len', 'daniellarson@email.com', 'len', 'No');
 
 --
 -- Indexes for dumped tables
@@ -216,6 +253,12 @@ ALTER TABLE `tbl_response`
   ADD PRIMARY KEY (`response_id`);
 
 --
+-- Indexes for table `tbl_users`
+--
+ALTER TABLE `tbl_users`
+  ADD PRIMARY KEY (`user_id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -241,7 +284,7 @@ ALTER TABLE `tbl_evaluators`
 -- AUTO_INCREMENT for table `tbl_participants`
 --
 ALTER TABLE `tbl_participants`
-  MODIFY `participant_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `participant_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `tbl_program`
@@ -266,6 +309,12 @@ ALTER TABLE `tbl_questionnaire`
 --
 ALTER TABLE `tbl_response`
   MODIFY `response_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `tbl_users`
+--
+ALTER TABLE `tbl_users`
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
