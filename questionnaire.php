@@ -25,383 +25,199 @@
 ?>
 
 <form class="form" 	method="POST" action="">
-		<div class="title">
-			<h1>Evaluation Form</h1>
-			<p>Evaluate Teacher</p>
+	<div class="title">
+		<h1>Evaluation Form</h1>
+		<p>Evaluate Teacher</p>
+	</div>
+
+	<!-- ------------------------- -->
+
+
+	<div class="main-content">
+		<div class="wrapper">
+			<table class="tbl-full">
+				<tr>
+					<td class="criteria">Learning Qualities</td>
+				</tr>
+					<tr>
+						<td>1.1 I am engaged to think deeply with and about the important concepts and theories.</td>
+						<td>
+							<label class="container">5 pts
+							<input type="radio" name="q1" value="5">
+							<label class="container">4 pts
+							<input type="radio" name="q1" value="4">
+							<label class="container">3 pts
+							<input type="radio" name="q1" value="3">
+							<label class="container">2 pts
+							<input type="radio" name="q1" value="2">
+							<label class="container">1 pts
+							<input type="radio" name="q1" value="1">
+						</td>
+					</tr>
+
+					<tr>
+						<td>1.2 I have opportunities to create and generate new ideas.</td>
+						<td>
+							<label class="container">5 pts
+							<input type="radio" name="q2" value="5">
+							<label class="container">4 pts
+							<input type="radio" name="q2" value="4">
+							<label class="container">3 pts
+							<input type="radio" name="q2" value="3">
+							<label class="container">2 pts
+							<input type="radio" name="q2" value="2">
+							<label class="container">1 pts
+							<input type="radio" name="q2" value="1">
+						</td>
+					</tr>
+
+					<tr>
+						<td>1.3 I have opportunities to create and generate new ideas.</td>
+						<td>
+							<label class="container">5 pts
+							<input type="radio" name="q3" value="5">
+							<label class="container">4 pts
+							<input type="radio" name="q3" value="4">
+							<label class="container">3 pts
+							<input type="radio" name="q3" value="3">
+							<label class="container">2 pts
+							<input type="radio" name="q3" value="2">
+							<label class="container">1 pts
+							<input type="radio" name="q3" value="1">
+						</td>
+					</tr>
+
+					<tr>
+						<td>1.4 I have opportunities to create and generate new ideas.</td>
+						<td>
+							<label class="container">5 pts
+							<input type="radio" name="q4" value="5">
+							<label class="container">4 pts
+							<input type="radio" name="q4" value="4">
+							<label class="container">3 pts
+							<input type="radio" name="q4" value="3">
+							<label class="container">2 pts
+							<input type="radio" name="q4" value="2">
+							<label class="container">1 pts
+							<input type="radio" name="q4" value="1">
+						</td>
+					</tr>
+
+					<tr>
+						<td>1.5 I have opportunities to create and generate new ideas.</td>
+						<td>
+							<label class="container">5 pts
+							<input type="radio" name="q5" value="5">
+							<label class="container">4 pts
+							<input type="radio" name="q5" value="4">
+							<label class="container">3 pts
+							<input type="radio" name="q5" value="3">
+							<label class="container">2 pts
+							<input type="radio" name="q5" value="2">
+							<label class="container">1 pts
+							<input type="radio" name="q5" value="1">
+						</td>
+					</tr>
+
+					<tr>
+						<td class="criteria">Teaching Qualities</td>
+					</tr>
+					
+					<tr>
+						<td>2.1 The teacher is knowledgeable in the subject matter.</td>
+						<td>
+							<label class="container">5 pts
+							<input type="radio" name="q2_1" value="5">
+							<label class="container">4 pts
+							<input type="radio" name="q2_1" value="4">
+							<label class="container">3 pts
+							<input type="radio" name="q2_1" value="3">
+							<label class="container">2 pts
+							<input type="radio" name="q2_1" value="2">
+							<label class="container">1 pts
+							<input type="radio" name="q2_1" value="1">
+						</td>
+					</tr>
+
+					<tr>
+						<td>2.2 I have opportunities to create and generate new ideas.</td>
+						<td>
+							<label class="container">5 pts
+							<input type="radio" name="q2_2" value="5">
+							<label class="container">4 pts
+							<input type="radio" name="q2_2" value="4">
+							<label class="container">3 pts
+							<input type="radio" name="q2_2" value="3">
+							<label class="container">2 pts
+							<input type="radio" name="q2_2" value="2">
+							<label class="container">1 pts
+							<input type="radio" name="q2_2" value="1">
+						</td>
+					</tr>
+
+					<tr>
+						<td>2.3 I have opportunities to create and generate new ideas.</td>
+						<td>
+							<label class="container">5 pts
+							<input type="radio" name="q2_3" value="5">
+							<label class="container">4 pts
+							<input type="radio" name="q2_3" value="4">
+							<label class="container">3 pts
+							<input type="radio" name="q2_3" value="3">
+							<label class="container">2 pts
+							<input type="radio" name="q2_3" value="2">
+							<label class="container">1 pts
+							<input type="radio" name="q2_3" value="1">
+						</td>
+					</tr>
+
+					<tr>
+						<td>2.4 I have opportunities to create and generate new ideas.</td>
+						<td>
+							<label class="container">5 pts
+							<input type="radio" name="q2_4" value="5">
+							<label class="container">4 pts
+							<input type="radio" name="q2_4" value="4">
+							<label class="container">3 pts
+							<input type="radio" name="q2_4" value="3">
+							<label class="container">2 pts
+							<input type="radio" name="q2_4" value="2">
+							<label class="container">1 pts
+							<input type="radio" name="q2_4" value="1">
+						</td>
+					</tr>
+
+					<tr>
+						<td>2.5 I have opportunities to create and generate new ideas.</td>
+						<td>
+							<label class="container">5 pts
+							<input type="radio" name="q2_5" value="5">
+							<label class="container">4 pts
+							<input type="radio" name="q2_5" value="4">
+							<label class="container">3 pts
+							<input type="radio" name="q2_5" value="3">
+							<label class="container">2 pts
+							<input type="radio" name="q2_5" value="2">
+							<label class="container">1 pts
+							<input type="radio" name="q2_5" value="1">
+						</td>
+					</tr>
+
+					<tr>
+						<td>Comments:</td>
+						<td>
+						<textarea name="message" rows="8" cols="80" placeholder="Message" class="input-responsive"></textarea>
+						</td>
+                	</tr>
+
+					<tr>
+						<td colspan="2">
+							<input type="submit" name="submit" value="Add Food" class="btn-secondary">
+						</td>
+                	</tr>
+			</table>
 		</div>
-
-		<!-- ------------------------- -->
-
-
-		<div class="main-content">
-
-
-        <table class="tbl-full">
-		<div class="main-content">
-			<div class="Fname"> Learning Process <span class="required">*</span></div>
-
-		    <div class="First-Questionnaire"> 1.1 I am engaged to think deeply with and about the important concepts and theories.</div>
-
-		    <div class="choices-div">
-		    	&nbsp;&nbsp;&nbsp;&nbsp;
-			<!-- <div class="name"> Gender: </div> -->
-			<label class="container">5 pts
-			<input type="radio" name="q1" value="5">
-			<span class="checkmark"></span>
-			</label>
-
-			<label class="container">4 pts
-			<input type="radio" name="q1" value="4">
-			<span class="checkmark"></span>
-			</label>
-
-			<label class="container">3 pts
-			<input type="radio" name="q1" value="3">
-			<span class="checkmark"></span>
-			</label>
-
-			<label class="container">2 pts
-			<input type="radio" name="q1" value="2">
-			<span class="checkmark"></span>
-			</label>
-
-			<label class="container">1 pts
-			<input type="radio" name="q1" value="1">
-			<span class="checkmark"></span>
-			</label>
-
-			</div>
-
-&nbsp;
-			<div class="First-Questionnaire">1.2 I have opportunities to create and generate new ideas.</div>
-
-
-
-		    <div class="choices-div">
-		    	&nbsp;&nbsp;&nbsp;&nbsp;
-			<!-- <div class="name"> Gender: </div> -->
-			<label class="container">5 pts
-			<input type="radio" name="q2" value="5">
-			<span class="checkmark"></span>
-			</label>
-
-			<label class="container">4 pts
-			<input type="radio" name="q2" value="4">
-			<span class="checkmark"></span>
-			</label>
-
-			<label class="container">3 pts
-			<input type="radio" name="q2" value="3">
-			<span class="checkmark"></span>
-			</label>
-
-			<label class="container">2 pts
-			<input type="radio" name="q2" value="2">
-			<span class="checkmark"></span>
-			</label>
-
-			<label class="container">1 pts
-			<input type="radio" name="q2" value="1">
-			<span class="checkmark"></span>
-			</label>
-
-			</div>
-
-&nbsp;
-			<div class="First-Questionnaire">1.3 I have opportunities to create and generate new ideas.</div>
-
-
-
-		    <div class="choices-div">
-		    	&nbsp;&nbsp;&nbsp;&nbsp;
-			<!-- <div class="name"> Gender: </div> -->
-			<label class="container">5 pts
-			<input type="radio" name="q3" value="5">
-			<span class="checkmark"></span>
-			</label>
-
-			<label class="container">4 pts
-			<input type="radio" name="q3" value="4">
-			<span class="checkmark"></span>
-			</label>
-
-			<label class="container">3 pts
-			<input type="radio" name="q3" value="3">
-			<span class="checkmark"></span>
-			</label>
-
-			<label class="container">2 pts
-			<input type="radio" name="q3" value="2">
-			<span class="checkmark"></span>
-			</label>
-
-			<label class="container">1 pts
-			<input type="radio" name="q3" value="1">
-			<span class="checkmark"></span>
-			</label>
-
-			</div>
-&nbsp;
-			<div class="First-Questionnaire">1.4 I have opportunities to create and generate new ideas.</div>
-
-
-
-		    <div class="choices-div">
-		    	&nbsp;&nbsp;&nbsp;&nbsp;
-			<!-- <div class="name"> Gender: </div> -->
-			<label class="container">5 pts
-			<input type="radio" name="q4" value="5">
-			<span class="checkmark"></span>
-			</label>
-
-			<label class="container">4 pts
-			<input type="radio" name="q4" value="4">
-			<span class="checkmark"></span>
-			</label>
-
-			<label class="container">3 pts
-			<input type="radio" name="q4" value="3">
-			<span class="checkmark"></span>
-			</label>
-
-			<label class="container">2 pts
-			<input type="radio" name="q4" value="2">
-			<span class="checkmark"></span>
-			</label>
-
-			<label class="container">1 pts
-			<input type="radio" name="q4" value="1">
-			<span class="checkmark"></span>
-			</label>
-
-			</div>
-
-			&nbsp;
-			<div class="First-Questionnaire">1.5 I have opportunities to create and generate new ideas.</div>
-
-
-
-		    <div class="choices-div">
-		    	&nbsp;&nbsp;&nbsp;&nbsp;
-			<!-- <div class="name"> Gender: </div> -->
-			<label class="container">5 pts
-			<input type="radio" name="q5" value="5">
-			<span class="checkmark"></span>
-			</label>
-
-			<label class="container">4 pts
-			<input type="radio" name="q5" value="4">
-			<span class="checkmark"></span>
-			</label>
-
-			<label class="container">3 pts
-			<input type="radio" name="q5" value="3">
-			<span class="checkmark"></span>
-			</label>
-
-			<label class="container">2 pts
-			<input type="radio" name="q5" value="2">
-			<span class="checkmark"></span>
-			</label>
-
-			<label class="container">1 pts
-			<input type="radio" name="q5" value="1">
-			<span class="checkmark"></span>
-			</label>
-
-			</div>
-
-		</div>
-		</div>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<!-- ---------------------------- -->
-
-		<div>
-		<div class="Second - Questionnaire- div">
-			<div class="Fname"> Teacher Qualities <span class="required">*</span></div>
-
-			<div class="First-Questionnaire"> 2.1 The teacher is knowledgeable in the subject matter.</div>
-
-
-		    <div class="choices-div">
-		    	&nbsp;&nbsp;&nbsp;&nbsp;
-			
-			<label class="container">5 pts
-			<input type="radio" name="q2_1" value="5">
-			<span class="checkmark"></span>
-			</label>
-
-			<label class="container">4 pts
-			<input type="radio" name="q2_1" value="4">
-			<span class="checkmark"></span>
-			</label>
-
-			<label class="container">3 pts
-			<input type="radio" name="q2_1" value="3">
-			<span class="checkmark"></span>
-			</label>
-
-			<label class="container">2 pts
-			<input type="radio" name="q2_1" value="2">
-			<span class="checkmark"></span>
-			</label>
-
-			<label class="container">1 pts
-			<input type="radio" name="q_1" value="1">
-			<span class="checkmark"></span>
-			</label>
-
-			</div>
-
-&nbsp;
-			<div class="Second-Questionnaire">2.2 I have opportunities to create and generate new ideas.</div>
-
-
-
-		    <div class="choices-div">
-		    	&nbsp;&nbsp;&nbsp;&nbsp;
-			<!-- <div class="name"> Gender: </div> -->
-			<label class="container">5 pts
-			<input type="radio" name="q2_2" value="5">
-			<span class="checkmark"></span>
-			</label>
-
-			<label class="container">4 pts
-			<input type="radio" name="q2_2" value="4">
-			<span class="checkmark"></span>
-			</label>
-
-			<label class="container">3 pts
-			<input type="radio" name="q2_2" value="3">
-			<span class="checkmark"></span>
-			</label>
-
-			<label class="container">2 pts
-			<input type="radio" name="q2_2" value="2">
-			<span class="checkmark"></span>
-			</label>
-
-			<label class="container">1 pts
-			<input type="radio" name="q2_2" value="1">
-			<span class="checkmark"></span>
-			</label>
-
-			</div>
-
-&nbsp;
-			<div class="Second-Questionnaire">2.3 I have opportunities to create and generate new ideas.</div>
-
-
-
-		    <div class="choices-div">
-		    	&nbsp;&nbsp;&nbsp;&nbsp;
-			<!-- <div class="name"> Gender: </div> -->
-			<label class="container">5 pts
-			<input type="radio" name="q2_3" value="5">
-			<span class="checkmark"></span>
-			</label>
-
-			<label class="container">4 pts
-			<input type="radio" name="q2_3" value="4">
-			<span class="checkmark"></span>
-			</label>
-
-			<label class="container">3 pts
-			<input type="radio" name="q2_3" value="3">
-			<span class="checkmark"></span>
-			</label>
-
-			<label class="container">2 pts
-			<input type="radio" name="q2_3" value="2">
-			<span class="checkmark"></span>
-			</label>
-
-			<label class="container">1 pts
-			<input type="radio" name="q2_3" value="1">
-			<span class="checkmark"></span>
-			</label>
-
-			</div>
-        &nbsp;
-            <div class="Second-Questionnaire">2.4 I have opportunities to create and generate new ideas.</div>
-
-
-
-                <div class="choices-div">
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                <!-- <div class="name"> Gender: </div> -->
-                <label class="container">5 pts
-                <input type="radio" name="q2_4" value="5">
-                <span class="checkmark"></span>
-                </label>
-
-                <label class="container">4 pts
-                <input type="radio" name="q2_4" value="4">
-                <span class="checkmark"></span>
-                </label>
-
-                <label class="container">3 pts
-                <input type="radio" name="q2_4" value="3">
-                <span class="checkmark"></span>
-                </label>
-
-                <label class="container">2 pts
-                <input type="radio" name="q2_4" value="2">
-                <span class="checkmark"></span>
-                </label>
-
-                <label class="container">1 pts
-                <input type="radio" name="q2_4" value="1">
-                <span class="checkmark"></span>
-                </label>
-
-                </div>
-
-                &nbsp;
-
-            <div class="Second-Questionnaire">2.5 I have opportunities to create and generate new ideas.</div>
-
-                <div class="choices-div">
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                
-                    <label class="container">5 pts
-                    <input type="radio" name="q2_5" value="5">
-                    <span class="checkmark"></span>
-                    </label>
-
-                    <label class="container">4 pts
-                    <input type="radio" name="q2_5" value="4">
-                    <span class="checkmark"></span>
-                    </label>
-
-                    <label class="container">3 pts
-                    <input type="radio" name="q2_5" value="3">
-                    <span class="checkmark"></span>
-                    </label>
-
-                    <label class="container">2 pts
-                    <input type="radio" name="q2_5" value="2">
-                    <span class="checkmark"></span>
-                    </label>
-
-                    <label class="container">1 pts
-                    <input type="radio" name="q2_5" value="1">
-                    <span class="checkmark"></span>
-                    </label>
-                
-                </div>
-            </div>
-            <div>
-                <input type="text" name="comments" cols="30" rows="5" placeholder="Comments">
-            </div>
-		</div>
-
-		&nbsp;&nbsp;&nbsp;&nbsp;
-		<div>
-        <input type="submit" name="submit" value="Submit" class="btn-secondary">
-		</div>
-
-        </table>
+	</div>
 </form>
 
 <?php
@@ -458,10 +274,7 @@
         }
 
         ob_end_flush(); 
-    } else {
-        echo "Error.";
     }
-
 ?>
 
 <?php include('partials-front/footer.php') ?>

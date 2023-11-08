@@ -104,16 +104,10 @@
 
 
 <?php 
-    //Process the Value from Form and Save it in Database
 
-    //Check whether the submit button is clicked or not
 
     if(isset($_POST['submit']))
     {
-        // Button Clicked
-        //echo "Button Clicked";
-
-        //1. Get the Data from form
         $username = $_POST['username'];
         $full_name = $_POST['full_name'];
         $email = $_POST['email'];
@@ -129,7 +123,6 @@
         }
         //$password = md5($_POST['password']); //Password Encryption with MD5
 
-        //2. SQL Query to Save the data into database
         $sql = "INSERT INTO tbl_users SET 
             username='$username',
             full_name='$full_name',
@@ -138,26 +131,18 @@
             evaluator='$evaluator'
         ";
  
-        //3. Executing Query and Saving Data into Datbase
         $res = mysqli_query($conn, $sql);
 
-        //4. Check whether the (Query is Executed) data is inserted or not and display appropriate message
         if($res==TRUE)
         {
-            //Data Inserted
-            //echo "Data Inserted";
-            //Create a Session Variable to Display Message
             $_SESSION['add'] = "<div class='success'>Register Success.</div>";
-            //Redirect Page to Manage Admin
+
             header("location:".SITEURL.'login.php');
         }
         else
         {
-            //FAiled to Insert DAta
-            //echo "Faile to Insert Data";
-            //Create a Session Variable to Display Message
             $_SESSION['add'] = "<div class='error'>Failed to register.</div>";
-            //Redirect Page to Add Admin
+
             header("location:".SITEURL.'register.php');
         }
 

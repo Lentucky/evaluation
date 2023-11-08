@@ -62,10 +62,7 @@
                                 //WE HAve data in database
                                 while($rows=mysqli_fetch_assoc($res))
                                 {
-                                    //Using While loop to get all the data from database.
-                                    //And while loop will run as long as we have data in database
 
-                                    //Get individual DAta
                                     $userId=$rows['user_id'];
                                     $evalId=$rows['evaluator_id'];
                                     $Q1=$rows['Q1'];

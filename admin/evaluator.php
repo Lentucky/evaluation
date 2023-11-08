@@ -5,16 +5,17 @@
             <div class="wrapper">
                 <h1>Manage Evaluators</h1>
 
-                <br />
+                <br>
+                    <?php
+                    
+                    if(isset($_SESSION['delete']))
+                    {
+                        echo $_SESSION['delete'];
+                        unset($_SESSION['delete']);
+                    }
 
-                <?php 
-
-                ?>
-                <br><br><br>
-
-
-                <br /><br /><br />
-
+                    ?>
+                <br>
                 <table class="tbl-full">
                     <tr>
                         <th>S.N.</th>
@@ -62,7 +63,7 @@
                                         <td><?php echo $username; ?></td>
                                         <td><?php echo $email; ?></td>
                                         <td>
-                                            <a href="<?php echo SITEURL; ?>admin/delete-admin.php?id=<?php echo $id; ?>" class="btn-danger">Delete Participant</a>
+                                            <a href="<?php echo SITEURL; ?>admin/delete-user.php?id=<?php echo $id; ?>" class="btn-danger">Delete Evaluator</a>
                                         </td>
                                     </tr>
 

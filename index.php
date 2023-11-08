@@ -8,6 +8,11 @@
             unset($_SESSION['login']);
         }
 
+        if(isset($_SESSION['update']))
+        {
+            echo $_SESSION['update'];
+            unset($_SESSION['update']);
+        }
     ?>
 
     <h1>This is the user/evaluation index</h1>
