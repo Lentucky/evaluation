@@ -37,7 +37,15 @@
                         <th>Q8</th>
                         <th>Q9</th>
                         <th>Q10</th>
+                        <th>Q11</th>
+                        <th>Q12</th>
+                        <th>Q13</th>
+                        <th>Q14</th>
+                        <th>Q15</th>
+                        <th>Q16</th>
+                        <th>Q17</th>
                         <th>Comment</th>
+                        <th>Date taken</th>
                     </tr>
 
                     
@@ -75,7 +83,15 @@
                                     $Q8=$rows['Q8'];
                                     $Q9=$rows['Q9'];
                                     $Q10=$rows['Q10'];
+                                    $Q11=$rows['Q11'];
+                                    $Q12=$rows['Q12'];
+                                    $Q13=$rows['Q13'];
+                                    $Q14=$rows['Q14'];
+                                    $Q15=$rows['Q15'];
+                                    $Q16=$rows['Q16'];
+                                    $Q17=$rows['Q17'];
                                     $comment=$rows['comment'];
+                                    $date_taken=$rows['date_taken'];
 
                                     //grab the participant name
                                     $userSql = "SELECT full_name FROM tbl_users WHERE user_id='$userId' ";
@@ -116,7 +132,15 @@
                                         <td><?php echo $Q8; ?></td>
                                         <td><?php echo $Q9; ?></td>
                                         <td><?php echo $Q10; ?></td>
+                                        <td><?php echo $Q11; ?></td>
+                                        <td><?php echo $Q12; ?></td>
+                                        <td><?php echo $Q13; ?></td>
+                                        <td><?php echo $Q14; ?></td>
+                                        <td><?php echo $Q15; ?></td>
+                                        <td><?php echo $Q16; ?></td>
+                                        <td><?php echo $Q17; ?></td>
                                         <td><?php echo $comment; ?></td>
+                                        <td><?php echo $date_taken; ?></td>
                                     </tr>
 
                                     <?php

@@ -1,0 +1,749 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+*{
+margin: 0;
+padding: 0;
+font-family: 'poppins',sans-serif;
+}
+section{
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+width: 100%;
+}
+
+.background {
+  /* Change the background image */
+  background-image: url('bg2.jpg');
+  /* Set background size */
+  background-size: cover;
+  /* Set background repeat, if needed */
+  background-repeat: no-repeat;
+  /* Set background position */
+  background-position: center center;
+  /* Set a fallback background color */
+  background-color: #ffffff;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  background: url('bg2.jpg') no-repeat;
+  background-position: center;
+  background-size: 100% 100%; /* Stretch the background image to cover the entire container */
+}
+
+.form-box-login {
+  position: relative;
+  width: 400px;
+  height: 330px;
+  background: transparent;
+  border: 2px solid rgba(255,255,255,0.5);
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  animation: fadeIn 1s ease-in-out; /* Example animation, adjust as needed */
+}
+
+.form-box {
+  position: relative;
+  width: 400px;
+  height: 475px;
+  background: transparent;
+  border: 2px solid rgba(255,255,255,0.5);
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  animation: fadeIn 1s ease-in-out; /* Example animation, adjust as needed */
+}
+
+.form-wrapper {
+  margin-top: 20px; /* Adjust margin as needed */
+}
+
+.form-box h2 {
+  text-align: center;
+  margin-bottom: 20px; /* Adjust margin as needed */
+  color: white;
+}
+
+.movehs {
+  margin-top: 20px; /* Adjust the value to move it down by the desired amount */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.form-box2 {
+  position: absolute;
+  width: 800px;
+  max-height: 300px;
+  overflow-y: auto;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  margin: 20px auto;
+  top: 150px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.form-box2 table {
+  width: 100%;
+}
+
+.form-box2 th {
+  border-bottom: 1px solid #ccc;
+}
+.form-box2 td {
+  color: white;
+}
+
+
+h2{
+font-size: 2em;
+color: #fff;
+text-align: center;
+margin-top: -50px;
+}
+
+
+.inputbox {
+  position: relative;
+  margin: 30px 0;
+  width: 310px;
+  border-bottom: 2px solid #fff;
+}
+
+.inputbox label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 1em;
+  pointer-events: none;
+  transition: .5s;
+}
+
+input:focus ~ label,
+input:valid ~ label {
+  top: -5px;
+}
+
+.inputbox input {
+  width: calc(100% - 40px); /* Adjusted width to leave space for the icon */
+  height: 50px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  padding: 0 35px 0 5px;
+  color: #fff;
+}
+
+.inputbox ion-icon {
+  position: absolute; /* Changed to absolute positioning */
+  right: 5px; /* Adjusted the right position */
+  top: 50%; /* Centered vertically */
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 1.2em;
+}
+
+.remember{
+margin: -15px 0 15px ;
+text-align: center;
+font-size: .9em;
+color: #fff;
+display: flex;
+justify-content: space-between;  
+}
+
+.remember label input{
+margin-right: 3px;
+
+}
+.remember label a{
+color: #fff;
+text-decoration: none;
+}
+.remember label a:hover{
+text-decoration: underline;
+
+}
+
+.forget {
+display: flex;
+justify-content: center; /* Center content horizontally */
+align-items: center; /* Center content vertically */
+margin: 15px 0 15px; /* Adjust the margin as needed */
+font-size: .9em;
+color: #fff;
+}
+
+.forget label input{
+margin-right: 3px;
+
+}
+.forget label a{
+color: #fff;
+text-decoration: none;
+}
+.forget label a:hover{
+text-decoration: underline;
+}
+
+.login-button{
+width: 100%;
+height: 40px;
+border-radius: 40px;
+background: #fff;
+border: none;
+outline: none;
+cursor: pointer;
+font-size: 1em;
+font-weight: 600;
+}
+.register{
+font-size: .9em;
+color: #fff;
+text-align: center;
+margin: 25px 0 10px;
+}
+.register p a{
+text-decoration: none;
+color: #fff;
+font-weight: 600;
+}
+.register p a:hover{
+text-decoration: underline;
+}
+
+section{
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+width: 100%;
+
+/* background: url('alto.png')no-repeat; */
+background-position: center;
+background-size: cover;
+
+
+}
+.register{
+    font-size: .9em;
+    color: #fff;
+    text-align: center;
+    margin: 25px 0 10px;
+}
+.register p a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+}
+.register p a:hover{
+    text-decoration: underline;
+}
+#yourElement {
+    position: absolute;
+    top: 15;
+    left: 35;
+  }
+
+  #yourElement ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+  }
+
+  #yourElement li {
+    margin-right: 40px;
+  }
+
+  #yourElement li a {
+    text-decoration: none;
+    color: white;
+      font-size: 18px;
+      transition: text-decoration 0.3s ease;
+  }
+  #yourElement li a:hover {
+      text-decoration: underline; /* Underline the text on hover */
+  }
+  h1 {
+    text-align: center;
+    color: white;
+    font-size: 24px; /* Adjust the font size as needed */
+    }
+
+    .footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background-color: #333; /* Set the background color of the footer */
+        color: white; /* Set the text color */
+        padding: 10px 0; /* Add padding for better visual appearance */
+        text-align: center;
+        }
+
+        .wrapper {
+        max-width: 960px; /* Set the maximum width of the content */
+        margin: 0 auto; /* Center the content within the wrapper */
+        }
+
+        /* Add some styles to the anchor tag */
+        .text-center a {
+        color: white;
+        text-decoration: none;
+        }
+
+        .text-center a:hover {
+        text-decoration: underline;
+        }
+
+        .radio {
+            color: white;
+            text-decoration: none;
+        }
+
+        .radio input[type="radio"] {
+            margin-right: 5px; /* Adjust the right margin as needed */
+        }
+        .radio-group input {
+            transform: scale(1.5); /* Adjust the scale factor as needed */
+            margin-right: 10px; /* Adjust the spacing as needed */
+            transition: transform 0.3s ease; /* Add a smooth transition effect */
+            opacity: 100; /* Hide the actual radio button */
+        }
+        .radio-group input:hover {
+            transform: scale(1.7); /* Adjust the hover scale factor as needed */
+        }
+        .radio-group input:not(:first-child) {
+            margin-left: 30px; /* Adjust the value as needed */
+        }
+        table {
+            margin: auto; /* Center the table within its container */
+            border-collapse: separate; /* Use separate borders for cells */
+            border-spacing: 30px; /* Add spacing between cells */
+          }
+        tr th {
+            font-size: 15px;
+            color: #fff;
+            padding: 10px;
+            text-align: center; /* Center-align the text */
+          }
+
+          /* dont touch */ /* dont touch */ /* dont touch */
+
+          .special-header { /* Change background color */
+            color: #fff; /* Change text color */
+            padding: 10px; /* Change padding */
+            font-size: 15px; /* Change font size */
+            text-align: center;
+          }
+          .special-header2{
+            color: #fff; /* Change text color */
+            padding: 10px; /* Change padding */
+            font-size: 15px; /* Change font size */
+            text-align: center;
+          }
+
+          .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            background-color: #c8cb00;
+            color: #fff;
+            border: 2px solid #c8cb00;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+          }
+
+          .button_adj{
+            position: relative;
+            left: 0px;
+
+          }
+      
+          /* Hover effect */
+          .button:hover {
+            background-color: #a7aa00;
+          }
+
+          .button2 {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            background-color: #c8cb00;
+            color: #fff;
+            border: 2px solid #c8cb00;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-right: -70px;
+          }
+
+          .button2_adj{
+            position: absolute;
+            top: 150px;
+            left: 300px;
+          }
+      
+          /* Hover effect */
+          .button2:hover {
+            background-color: #a7aa00;
+          }
+
+          .button3 {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            background-color: #c8cb00;
+            color: #fff;
+            border: 2px solid #c8cb00;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-left: 100px; 
+          }
+      
+          /* Hover effect */
+          .button3:hover {
+            background-color: #a7aa00;
+          }
+
+
+          .menu {
+          background-color: #181818;
+          padding: 30px;
+          margin-bottom: 30px;
+        }
+
+        .menu .wrapper {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .menu ul.container {
+          list-style-type: none !important;
+          padding: 0;
+          display: flex;
+          gap: 80px;
+        }
+
+        .menu li {
+          list-style: none;
+          margin-right: 0;
+        }
+
+        .menu a {
+          text-decoration: none;
+          color: white;
+          font-size: 18px;
+          padding: 10px 20px;
+          border-radius: 8px;
+          background-color: #c8cb00;
+          transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+        }
+
+        .menu a:hover {
+          transform: scale(1.1);
+          background-color: #a7aa00;
+        }
+          
+          img {
+            width: 100vw; /* Set width to 100% of viewport width */
+            height: 100vh; /* Set height to 100% of viewport height */
+            object-fit: cover; /* Maintain aspect ratio and cover the entire container */
+            display: block; /* Remove default inline display */
+          }
+
+          /* styles.css */
+
+.page-container {
+  text-align: center;
+}
+
+.form-box3 {
+  position: absolute;
+  width: 800px;
+  height: 225px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  backdrop-filter: blur(15px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 1s ease-in-out;
+  
+  /* Manually adjust these values for position */
+  top: 20%; /* Adjust the top position */
+  left: 28%; /* Adjust the left position */
+}
+
+.form-box3 h2 {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.form-box3 td{
+ color: white;
+}
+
+.tbl-full {
+  width: 100%;
+  margin-top: 20px; /* Adjust as needed */
+  margin-right: auto;
+}
+
+.tbl-full th{
+    border-bottom: 1px solid #ccc; /* Adjust the color as needed */
+    padding: 10px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.tbl-full td {
+    padding: 10px;
+    text-align: center;
+    padding-inline: 0px;
+}
+
+.form-box4 {
+  position: relative;
+  width: 400px;
+  height: 350px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 1s ease-in-out;
+  
+  /* Manually adjust these values for position */
+  top: 50px; /* Adjust the top position */
+  left: 36.5%; /* Adjust the left position */
+}
+
+.form-box4 h1 {
+  position: absolute;
+  top: -40px; /* Adjust the top position to move it higher */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2; /* Ensure the content is above the blurred background */
+}
+
+.form-box4 h2 {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.form-box4 td {
+  color: white;
+}
+
+
+
+
+.form-box5 {
+  position: relative;
+  width: 1200px;
+  max-height: 500px;
+  overflow-y: auto;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  margin: 20px auto;
+  top: -175px;
+  animation: fadeIn 1s ease-in-out;
+  padding: 10px;
+  top: 10px;
+}
+
+.form-box5 table {
+  width: 100%;
+}
+
+.form-box5 th {
+  border-bottom: 1px solid #ccc;
+}
+
+.form-box5 td {
+  color: white;
+}
+
+/* Additional styling for the form */
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.main-content {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.wrapper {
+  margin-top: 20px;
+}
+
+.tbl-full {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.criteria {
+  font-weight: bold;
+}
+
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.container input {
+  position: absolute;
+  opacity: 100;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 5px;
+}
+
+.container:hover input~.checkmark {
+  background-color: #ccc;
+}
+
+.container input:checked~.checkmark {
+  background-color: #2196F3;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container input:checked~.checkmark:after {
+  display: block;
+}
+
+.container .checkmark:after {
+  left: 10px;
+  top: 4px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+.radio-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.radio-buttons label {
+  margin-right: 30px; /* Adjust the margin as needed */
+}
+
+
+.container:last-child {
+  margin-right: 0; /* Remove margin from the last container to avoid extra space */
+}
+
+
+.commentbox{
+  position: relative;
+  right: -155px;
+}
+
+.commenttext{
+  position: absolute;
+  left: 193.5px;
+}
+
+.inputbox {
+    position: relative;
+  }
+
+  #showPasswordBtn {
+    position: absolute;
+    bottom: -1px;
+    left: -20px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    background: #fff; /* Background color of the circular button */
+    border: none;
+    border-radius: 50%; /* Make it circular */
+    padding: 8px; /* Adjust padding as needed */
+  }
+
+  #showPasswordBtn:focus {
+    outline: none;
+  }
+
+  .showpasscolor{
+    color: white;
+    position: relative;
+    left: 25px;
+    top: -15px;
+  }
+
+
+
+          
+          
+
+          
+          
+
+          
+          

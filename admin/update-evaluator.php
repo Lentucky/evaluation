@@ -10,7 +10,7 @@
         <?php 
             $id=$_GET['id'];
 
-            $sql="SELECT * FROM tbl_admin WHERE admin_id=$id";
+            $sql="SELECT * FROM tbl_users WHERE user_id=$id";
 
             $res=mysqli_query($conn, $sql);
 
@@ -24,11 +24,12 @@
 
                     $full_name = $row['full_name'];
                     $username = $row['username'];
+                    $email = $row['email'];
                     $password = $row['password'];
                 }
                 else
                 {
-                    header('location:'.SITEURL.'admin/admin.php');
+                    header('location:'.SITEURL.'admin/evaluator.php');
                 }
             }
         
@@ -49,6 +50,13 @@
                     <td>Username: </td>
                     <td>
                         <input type="text" name="username" value="<?php echo $username; ?>">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Email: </td>
+                    <td>
+                        <input type="text" name="email" value="<?php echo $username; ?>">
                     </td>
                 </tr>
 
@@ -78,13 +86,15 @@
         $id = $_POST['id'];
         $full_name = $_POST['full_name'];
         $username = $_POST['username'];
+        $email = $_POST['email'];
         $password = $_POST['password'];
 
-        $sql = "UPDATE tbl_admin SET
+        $sql = "UPDATE tbl_users SET
         full_name = '$full_name',
         username = '$username',
+        email = '$email',
         password = '$password' 
-        WHERE admin_id='$id'
+        WHERE user_id='$id'
         ";
 
         $res = mysqli_query($conn, $sql);
@@ -93,13 +103,13 @@
         {
             $_SESSION['update'] = "<div class='success'>Details Updated Successfully.</div>";
 
-            header('location:'.SITEURL.'admin.php');
+            header('location:'.SITEURL.'participant.php');
         }
         else
         {
             $_SESSION['update'] = "<div class='error'>Failed to Add Details</div>";
 
-            header('location:'.SITEURL.'admin.php');
+            header('location:'.SITEURL.'participant.php');
         }
     }
 

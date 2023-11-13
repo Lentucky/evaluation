@@ -9,32 +9,28 @@
     <head>
         <title>Evaluation</title>
 
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/index.css">
     </head>
     
     <body>
-        <!-- Menu Section Starts -->
-        <div class="menu text-center">
-            <div class="wrapper">
-                <ul>
-                    <li><a href="index.php">Home</a></li>
-                    
-                    <?php
-                        // //Sql Query 
-                        // $eval = "SELECT * FROM tbl_users WHERE evaluator='Yes' ";
-                        // //Execute Query
-                        // $res = mysqli_query($conn, $sql);
-                        // //Count Rows
-
-                        if (isset($_SESSION['evaluator']) && $_SESSION['evaluator'] == 'Yes') {
-                            echo "<li><a href='evaluate.php'>Evaluate</a></li>";
-
-                        }
-                    ?>
-
-                    <li><a href="profile.php">Profile</a></li>
-                    <li><a href="logout.php">Logout</a></li>
-                </ul>
-            </div>
-        </div>
-        <!-- Menu Section Ends -->
+<div class="menu">
+  <div class="wrapper">
+  <!-- <div class="container"> -->
+    <ul>
+      <li><a href="index.php">Home</a>
+      
+      <a href="profile.php">Profile</a>
+      
+      <?php
+        // Display evaluate tab if evaluator
+        if (isset($_SESSION['evaluator']) && $_SESSION['evaluator'] == 'Yes') {
+          echo "<a href='evaluate.php'>Evaluate</a>";
+        }
+      ?>
+      
+      <a href="logout.php">Logout</a></li>
+      
+    </ul>
+  </div>
+</div>
+<!-- </div> -->

@@ -1,9 +1,9 @@
 <?php include('partials/menu.php'); ?>
     <?php 
-        if(isset($_SESSION['login']))
+        if(isset($_SESSION['add']))
         {
-            echo $_SESSION['login'];
-            unset($_SESSION['login']);
+            echo $_SESSION['add'];
+            unset($_SESSION['add']);
         }
     ?>
 

@@ -5,101 +5,96 @@
 
 
 <html>
-    <head>
-        <title>Register</title>
-
-        <link rel="stylesheet" href="css/admin.css">
-    </head>
+<head>
+    <title>Register</title>
     
+
+    <link rel="stylesheet" href="css/index.css">
+    
+</head>
 <body>
-    <!-- Menu Section Starts -->
-    <div class="menu text-center">
-        <div class="wrapper">
-            <ul>
-                <li><a href="index.php">Home</a></li>
-                <li><a href="manage-admin.php">Profile</a></li>
-                <li><a href="logout.php">Logout</a></li>
-            </ul>
-        </div>
-    </div>
-    <!-- Menu Section Ends -->
 
-    <div class="main-content">
-        <div class="wrapper">
-            <h1>Add Participant</h1>
+    <?php 
+        if(isset($_SESSION['add'])) //Checking whether the SEssion is Set of Not
+        {
+            echo $_SESSION['add']; //Display the SEssion Message if SEt
+            unset($_SESSION['add']); //Remove Session Message
+        }
+        
+    ?>
+  <section>
+  <div id="yourElement">
+      <ul>
+        <li><a href="login.php">Back to login</a></li>
+      </ul>
+    </div>    
 
-            <br><br>
+    <div class="form-box">
+      <div class="form-value">
+        <h2>Register</h2>
+        <div class="form-wrapper">
+          <form action="" method="POST">
+                        
+                        
+                
+                        <div class="inputbox">
+                        
+                        <input type="text" name="username" required>
+                        <label for="">Username</label>
 
-            <?php 
-                if(isset($_SESSION['add'])) //Checking whether the SEssion is Set of Not
-                {
-                    echo $_SESSION['add']; //Display the SEssion Message if SEt
-                    unset($_SESSION['add']); //Remove Session Message
-                }
-            ?>
-
-            <form action="" method="POST">
-
-                <table class="tbl-30">
-                    <tr>
-                        <td>Username: </td>
-                        <td>
-                            <input type="text" name="username" placeholder="Your Username">
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>Full Name: </td>
-                        <td>
-                            <input type="text" name="full_name" placeholder="Enter Your Name">
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>Email: </td>
-                        <td>
-                            <input type="text" name="email" placeholder="Enter Your Email">
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>Password: </td>
-                        <td>
-                            <input type="password" name="password" placeholder="Your Password">
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>Evaluator: </td>
-                        <td>
-                            <input type="radio" name="evaluator" value="Yes"> Yes 
-                            <input type="radio" name="evaluator" value="No"> No
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td colspan="2">
-                            <input type="submit" name="submit" value="Add Admin" class="btn-secondary">
-                        </td>
-                    </tr>
-
-                </table>
-
-            </form>
+                        <ion-icon name="person"></ion-icon>
+                        </div>
 
 
-        </div>
-    </div>
+                        <div class="inputbox">
+                        
+                        <input type="text" name="full_name" required>
+                        <label for="">Fullname</label>
 
-    <!-- Footer Section Starts -->
-    <div class="footer">
-                <div class="wrapper">
-                    <p class="text-center">2023, Developed by - <a href="#"> TEAM ATOT</a></p>
+                        <ion-icon name="person-circle"></ion-icon>
+                        </div>
+
+
+                        <div class="inputbox">
+                        
+                        <input type="email" name="email" required>
+                        <label for="">Email</label>
+
+                        <ion-icon name="mail"></ion-icon>
+                        </div>
+
+
+                        <div class="inputbox">
+                        
+                        <input type="password" name="password" required>
+                        <label for="">Password</label>
+
+                        <ion-icon name="lock-closed"></ion-icon>
+                        </div>
+
+                        <div style="text-align: center;">
+                        <div class = "radio">
+                            <span class="radio-group">
+                                <input type="radio" name="evaluator" value="Yes"> 
+                                <label for="evaluator-yes">Evaluator</label>
+                                <input type="radio" name="evaluator" value="No">
+                                <label for="evaluator-no">Participant</label>
+                            </span>
+                        </div>
+                        </div>
+
+                            <div class = "register">
+                                <input type="submit" name="submit" value="Register" class="login-button">
+                        </div>
+                        
+                    </form>
                 </div>
             </div>
-        <!-- Footer Section Ends -->
-
-    </body>
+        </div>
+        </div>
+    </div>
+    </section>
+</body>
 </html>
 
 
@@ -111,7 +106,7 @@
         $username = $_POST['username'];
         $full_name = $_POST['full_name'];
         $email = $_POST['email'];
-        $password = $_POST['password'];
+        $password = md5($_POST['password']);
 
         if(isset($_POST['evaluator']))
         {
@@ -135,15 +130,15 @@
 
         if($res==TRUE)
         {
-            $_SESSION['add'] = "<div class='success'>Register Success.</div>";
+            $_SESSION['add'] = "<div class='success'><h2>Register Success.</h2></div>";
 
             header("location:".SITEURL.'login.php');
         }
         else
         {
-            $_SESSION['add'] = "<div class='error'>Failed to register.</div>";
+            $_SESSION['add'] = "<h2>Failed to register.</h2>";
 
-            header("location:".SITEURL.'register.php');
+            header("location:".SITEURL.'login.php');
         }
 
     }

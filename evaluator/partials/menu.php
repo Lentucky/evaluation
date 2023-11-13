@@ -9,7 +9,7 @@
 <html>
     <head>
         <title>Evaluation</title>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
         <link rel="stylesheet" href="../css/admin.css">
     </head>
     
@@ -19,10 +19,7 @@
             <div class="wrapper">
                 <ul>
                     <li><a href="index.php">Home</a></li>
-                    <li><a href="questionnaire.php">Questionnaire</a></li>
-                    <li><a href="participant.php">Participants</a></li>
-                    <li><a href="evaluator.php">Evaluators</a></li>
-                    <li><a href="admin.php">Admins</a></li>
+                    <li><a href="manage-admin.php">Profile</a></li>
                     <li><a href="logout.php">Logout</a></li>
                 </ul>
             </div>

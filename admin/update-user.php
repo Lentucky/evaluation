@@ -29,7 +29,7 @@
                 }
                 else
                 {
-                    header('location:'.SITEURL.'admin/index.php');
+                    header('location:'.SITEURL.'admin/participant.php');
                 }
             }
         
@@ -103,13 +103,13 @@
         {
             $_SESSION['update'] = "<div class='success'>Details Updated Successfully.</div>";
 
-            header('location:'.SITEURL.'index.php');
+            header('location:'.SITEURL.'participant.php');
         }
         else
         {
             $_SESSION['update'] = "<div class='error'>Failed to Add Details</div>";
 
-            header('location:'.SITEURL.'index.php');
+            header('location:'.SITEURL.'participant.php');
         }
     }
 

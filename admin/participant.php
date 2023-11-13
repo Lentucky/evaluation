@@ -1,4 +1,18 @@
-<?php include('partials/menu.php'); ?>
+<?php include('partials/menu.php'); 
+
+    if(isset($_SESSION['update']))
+    {
+        echo $_SESSION['update'];
+        unset($_SESSION['update']);
+    }
+    
+    if(isset($_SESSION['delete']))
+    {
+        echo $_SESSION['delete'];
+        unset($_SESSION['delete']);
+    }
+
+?>
 
         <div class="main-content">
             <div class="wrapper">
@@ -54,6 +68,7 @@
                                         <td><?php echo $username; ?></td>
                                         <td><?php echo $email; ?></td>
                                         <td>
+                                            <a href="<?php echo SITEURL; ?>admin/results.php?id=<?php echo $id; ?>" class="btn-primary">Check Results</a>
                                             <a href="<?php echo SITEURL; ?>admin/delete-user.php?id=<?php echo $id; ?>" class="btn-danger">Delete Participant</a>
                                         </td>
                                     </tr>

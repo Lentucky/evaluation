@@ -1,54 +1,98 @@
 <?php include('config/constants.php'); ?>
 
-<html>
-    <head>
-        <title>Login - Evaluation</title>
-        <link rel="stylesheet" href="css/style.css">
-    </head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+  <link rel="stylesheet" href="css/index.css">
+  <title>Log-in</title>
 
-    <body>
+</head>
+<body>  
+    <div class = "background">
+    <?php
+        if(isset($_SESSION['add']))
+        {
+            echo $_SESSION['add']; 
+            unset($_SESSION['add']); 
+        }
+
+        if(isset($_SESSION['login']))
+        {
+            echo $_SESSION['login'];
+            unset($_SESSION['login']);
+        }
+
+        if(isset($_SESSION['no-login-message']))
+        {
+            echo $_SESSION['no-login-message'];
+            unset($_SESSION['no-login-message']);
+        }
+
+        if(isset($_SESSION['update']))
+        {
+            echo $_SESSION['update'];
+            unset($_SESSION['update']);
+        }
+    ?>
+    <section>
         
-        <div class="login">
-            <h1 class="text-center">Login</h1>
-            <br><br>
+    <div class="form-box-login">
+  <div class="form-value">
+    <h2>Login</h2>
+    <form action="" method="POST">
 
-            <?php
-                if(isset($_SESSION['add']))
-                {
-                    echo $_SESSION['add']; 
-                    unset($_SESSION['add']); 
-                }
+      <div class="inputbox">
+        <input type="text" name="username" required>
+        <label for="">Username</label>
+        <ion-icon name="person"></ion-icon>
+      </div>
 
-                if(isset($_SESSION['login']))
-                {
-                    echo $_SESSION['login'];
-                    unset($_SESSION['login']);
-                }
+      <div class="inputbox">
+  <input type="password" name="password" id="passwordInput" required>
+  <label for="passwordInput">Password</label>
+  <ion-icon name="lock-closed-outline"></ion-icon>
 
-                if(isset($_SESSION['no-login-message']))
-                {
-                    echo $_SESSION['no-login-message'];
-                    unset($_SESSION['no-login-message']);
-                }
-            ?>
-            <br><br>
+  
+</div>
 
-            <form action="" method="POST" class="text-center">
-            Username: <br>
-            <input type="text" name="username" placeholder="Enter Username"><br><br>
-
-            Password: <br>
-            <input type="password" name="password" placeholder="Enter Password"><br><br>
-
-            <input type="submit" name="submit" value="Login" class="btn-primary">
-            <br><br>
-            </form>
-            
-            <p class="text-center">No account? - <a href="register.php">Register</a></p>
-            <p class="text-center">Created By - <a href="">Group 4</a></p>
+      <div class="showPasswordBtn">
+        <div class="showpasscolor">
+        <label for=""><input type="checkbox" id="showPasswordBtn" onclick="togglePassword()">Show Password</label>
         </div>
+            <script>
+                function togglePassword() {
+                    var passwordInput = document.getElementById('passwordInput');
+                    var showPasswordBtn = document.getElementById('showPasswordBtn');
 
-    </body>
+                if (passwordInput.type === 'password') {
+                    passwordInput.type = 'text';
+                    showPasswordBtn.textContent = 'Hide Password';
+                } else {
+                passwordInput.type = 'password';
+                showPasswordBtn.textContent = 'Show Password';
+                }
+            }
+</script>
+      </div>
+
+      <div>
+        <input type="submit" name="submit" value="Login" class="login-button">
+      </div>
+
+      <div class="register">
+        <p>Don't have an account? <a href="register.php">Register</a></p>
+      </div>
+    </form>
+  </div>
+</div>
+
+        
+    </section>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </div>
+</body>
 </html>
 
 <?php 
@@ -57,7 +101,8 @@
     {
 
         $username = mysqli_real_escape_string($conn, $_POST['username']);
-        $password = mysqli_real_escape_string($conn, $_POST['password']);
+        $raw_password = md5($_POST['password']);
+        $password = mysqli_real_escape_string($conn, $raw_password);
 
         $sql = "SELECT * FROM tbl_users WHERE username='$username' AND password='$password' ";
 
@@ -70,7 +115,7 @@
 
         if($count==1)
         {
-            $_SESSION['login'] = "<div class='success'>Login Successful $logged_id.</div>";
+            $_SESSION['login'] = "<h2>Login Successful $logged_id.</h2>";
             $_SESSION['user'] = $username; 
             $_SESSION['evaluator'] = $evaluator;
             $_SESSION['logged_id'] = $user_id;
@@ -79,7 +124,7 @@
         }
         else
         {
-            $_SESSION['login'] = "<div class='error text-center'>Username or Password did not match.</div>";
+            $_SESSION['login'] = "<h2>Username or Password did not match.</h2>";
 
             header('location:'.SITEURL.'login.php');
         }

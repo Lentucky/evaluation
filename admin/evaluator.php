@@ -1,4 +1,18 @@
-<?php include('partials/menu.php'); ?>
+<?php include('partials/menu.php'); 
+
+    if(isset($_SESSION['update']))
+    {
+        echo $_SESSION['update'];
+        unset($_SESSION['update']);
+    }
+
+    if(isset($_SESSION['delete']))
+    {
+        echo $_SESSION['delete'];
+        unset($_SESSION['delete']);
+    }
+
+?>
 
         <!-- Main Content Section Starts -->
         <div class="main-content">

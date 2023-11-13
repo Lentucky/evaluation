@@ -1,7 +1,15 @@
 <?php include('partials-front/menu.php'); ?>
 
-
-<div class="main-content">
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/index.css">
+  <title></title>
+</head>
+<body>
+<div class="form-box4">
     <div class="wrapper">
         <h1>Update Details</h1>
 
@@ -56,21 +64,21 @@
                 <tr>
                     <td>Email: </td>
                     <td>
-                        <input type="text" name="email" value="<?php echo $username; ?>">
+                        <input type="text" name="email" value="<?php echo $email; ?>">
                     </td>
                 </tr>
 
                 <tr>
                     <td>Password: </td>
                     <td>
-                        <input type="text" name="password" value="<?php echo $username; ?>">
+                        <input type="text" name="password" value="<?php echo $password; ?>">
                     </td>
                 </tr>
 
                 <tr>
                     <td colspan="2">
                         <input type="hidden" name="id" value="<?php echo $id; ?>">
-                        <input type="submit" name="submit" value="Update Admin" class="btn-secondary">
+                        <input type="submit" name="submit" value="Update" class="button3">
                     </td>
                 </tr>
 
@@ -79,6 +87,10 @@
         </form>
     </div>
 </div>
+</body>
+</html>
+
+
 
 <?php 
     if(isset($_POST['submit']))
@@ -88,6 +100,7 @@
         $username = $_POST['username'];
         $email = $_POST['email'];
         $password = $_POST['password'];
+        //$password = $_POST['password'];
 
         $sql = "UPDATE tbl_users SET
         full_name = '$full_name',
@@ -101,13 +114,16 @@
 
         if($res==true)
         {
-            $_SESSION['update'] = "<div class='success'>Details Updated Successfully.</div>";
+            $_SESSION['update'] = "<div class='success'>Details updated successfully, please login again.</div>";
 
-            header('location:'.SITEURL.'index.php');
+            unset($_SESSION['user']);
+
+            header('location:'.SITEURL.'login.php');
+
         }
         else
         {
-            $_SESSION['update'] = "<div class='error'>Failed to Add Details</div>";
+            $_SESSION['update'] = "<div class='error'>Failed to update details</div>";
 
             header('location:'.SITEURL.'index.php');
         }

@@ -4,7 +4,6 @@
         <!-- Main Content Section Starts -->
         <div class="main-content">
             <div class="wrapper">
-                <h1>Evaluate</h1>
 
                 <br />
 
@@ -28,13 +27,28 @@
                 <br><br><br>
 
 
-                <table class="tbl-full">
+                
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <section>
+<table class="form-box2">
+   
                     <tr>
-                        <th>S.N.</th>
-                        <th>Full Name</th>
-                        <th>Username</th>
-                        <th>Actions</th>
+                        <th class = "special-header2">S.N.</th>
+                        <th class = "special-header">Full Name</th>
+                        <th class = "special-header2">Username</th>
+                        <th class = "special-header2">Email</th>
                     </tr>
+                </section>  
+                          
+</body>
+</html>
 
                     
                     <?php 
@@ -75,7 +89,7 @@
                                         <td><?php echo $username; ?></td>
                                         <td><?php echo $email; ?></td>
                                         <td>
-                                            <a href="<?php echo SITEURL; ?>questionnaire.php?id=<?php echo $user_id; ?>" class="btn-primary">Evaluate</a>
+                                            <a href="<?php echo SITEURL; ?>questionnaire.php?id=<?php echo $user_id; ?>" class="button">Evaluate</a>
 
                                         </td>
                                     </tr>
@@ -100,4 +114,5 @@
         </div>
         <!-- Main Content Setion Ends -->
 
-<?php include('partials-front/footer.php'); ?>
+        <?php include('partials-front/footer.php') ?>
+
